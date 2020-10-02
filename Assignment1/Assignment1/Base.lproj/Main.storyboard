@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,88 +12,109 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Assignment1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="EG6-g9-079" userLabel="Stack Game">
-                                <rect key="frame" x="27.5" y="81" width="354" height="684"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EG6-g9-079" userLabel="Stack Game">
+                                <rect key="frame" x="20" y="81" width="335" height="677"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MH-HJ-cGX">
-                                        <rect key="frame" x="134" y="0.0" width="86.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-Na-soj" userLabel="Stack player1">
-                                        <rect key="frame" x="0.0" y="70.5" width="354" height="198.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bnr-BN-j3H" userLabel="Stack name">
+                                        <rect key="frame" x="124.33333333333334" y="0.0" width="86.333333333333343" height="20.333333333333332"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdM-Yd-dHP">
-                                                <rect key="frame" x="148" y="0.0" width="58.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5MH-HJ-cGX">
+                                                <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="yvD-8P-Iub" userLabel="Stack player1Cards">
-                                                <rect key="frame" x="0.0" y="70.5" width="354" height="128"/>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="z5u-Na-soj" userLabel="Stack player1">
+                                        <rect key="frame" x="47.666666666666686" y="106.33333333333334" width="240" height="122"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdM-Yd-dHP">
+                                                <rect key="frame" x="90.666666666666671" y="0.0" width="58.666666666666671" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yvD-8P-Iub" userLabel="Stack player1Cards">
+                                                <rect key="frame" x="0.0" y="30.333333333333321" width="240" height="91.666666666666686"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eeF-kk-q0W">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="128"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_back" translatesAutoresizingMaskIntoConstraints="NO" id="eeF-kk-q0W">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="91.666666666666671"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-dY-Ygj">
-                                                        <rect key="frame" x="135" y="0.0" width="84" height="128"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray_back" translatesAutoresizingMaskIntoConstraints="NO" id="OZV-dY-Ygj">
+                                                        <rect key="frame" x="89.999999999999986" y="0.0" width="60.000000000000014" height="91.666666666666671"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-tZ-I5C">
-                                                        <rect key="frame" x="270" y="0.0" width="84" height="128"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_back" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-tZ-I5C">
+                                                        <rect key="frame" x="180" y="0.0" width="60" height="91.666666666666671"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="nY6-Fo-FDc" userLabel="Stack player2">
-                                        <rect key="frame" x="0.0" y="319" width="354" height="198.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nY6-Fo-FDc" userLabel="Stack player2">
+                                        <rect key="frame" x="47.666666666666686" y="314.66666666666669" width="240" height="122"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-fy-T2I">
-                                                <rect key="frame" x="146.5" y="0.0" width="61" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9g-fy-T2I">
+                                                <rect key="frame" x="89.333333333333329" y="0.0" width="60.999999999999986" height="20.333333333333332"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-wT-C3r" userLabel="Stack player2Cards">
-                                                <rect key="frame" x="0.0" y="70.5" width="354" height="128"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2Ft-wT-C3r" userLabel="Stack player2Cards">
+                                                <rect key="frame" x="0.0" y="30.333333333333321" width="240" height="91.666666666666686"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9WN-HN-k0v">
-                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="128"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="purple_back" translatesAutoresizingMaskIntoConstraints="NO" id="9WN-HN-k0v">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="91.666666666666671"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sh1-Hr-eGH">
-                                                        <rect key="frame" x="135" y="0.0" width="84" height="128"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_back" translatesAutoresizingMaskIntoConstraints="NO" id="Sh1-Hr-eGH">
+                                                        <rect key="frame" x="89.999999999999986" y="0.0" width="60.000000000000014" height="91.666666666666671"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VHz-SM-HRb">
-                                                        <rect key="frame" x="270" y="0.0" width="84" height="128"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yellow_back" translatesAutoresizingMaskIntoConstraints="NO" id="VHz-SM-HRb">
+                                                        <rect key="frame" x="180" y="0.0" width="60" height="91.666666666666671"/>
                                                     </imageView>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="winner is" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PQ-wp-25E">
-                                        <rect key="frame" x="143" y="567.5" width="68" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RmS-mr-rzt">
-                                        <rect key="frame" x="151.5" y="638" width="51" height="46"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <state key="normal" title="play">
-                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        </state>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-z4-7z5" userLabel="Stack winner">
+                                        <rect key="frame" x="163" y="522.66666666666663" width="9" height="20.333333333333371"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PQ-wp-25E">
+                                                <rect key="frame" x="0.0" y="0.0" width="9" height="20.333333333333332"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crd-MR-HcQ">
+                                        <rect key="frame" x="140.66666666666666" y="629" width="54" height="48"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="play"/>
                                         <connections>
-                                            <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CIT-fq-Bzr"/>
+                                            <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W4S-K2-T08"/>
                                         </connections>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EG6-g9-079" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="7sf-Kx-Rwv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EG6-g9-079" secondAttribute="trailing" constant="20" id="Ait-Pk-Qva"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EG6-g9-079" secondAttribute="bottom" constant="20" id="CWU-xw-hNj"/>
+                            <constraint firstItem="EG6-g9-079" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="PAM-aX-9qm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EG6-g9-079" secondAttribute="bottom" constant="20" id="RdS-fr-RTF"/>
+                            <constraint firstItem="EG6-g9-079" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="37" id="f4h-8y-lwK"/>
+                            <constraint firstItem="EG6-g9-079" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pPD-gD-irM"/>
+                            <constraint firstItem="EG6-g9-079" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="v19-PV-qB1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EG6-g9-079" secondAttribute="trailing" constant="20" id="xOS-Ol-ojY"/>
+                            <constraint firstItem="EG6-g9-079" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xQu-2D-fqo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -105,11 +126,20 @@
                         <outlet property="player2card1" destination="9WN-HN-k0v" id="i7U-9f-1Ka"/>
                         <outlet property="player2card2" destination="Sh1-Hr-eGH" id="xMb-Se-v5h"/>
                         <outlet property="player2card3" destination="VHz-SM-HRb" id="eCO-VA-cZr"/>
+                        <outlet property="winnerlabel" destination="6PQ-wp-25E" id="N1L-oY-XWe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+            <point key="canvasLocation" x="39.130434782608695" y="63.616071428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blue_back" width="60" height="91.666664123535156"/>
+        <image name="gray_back" width="60" height="91.666664123535156"/>
+        <image name="green_back" width="60" height="91.666664123535156"/>
+        <image name="purple_back" width="60" height="91.666664123535156"/>
+        <image name="red_back" width="60" height="91.666664123535156"/>
+        <image name="yellow_back" width="60" height="91.666664123535156"/>
+    </resources>
 </document>
