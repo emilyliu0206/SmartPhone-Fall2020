@@ -39,22 +39,40 @@ class ViewController: UIViewController {
     }
     
     func playCards(){
+        winner = 0
         let randomCard1 = Int.random(in: 0..<52)
-        let randomCard2 = Int.random(in: 0..<52)
-        let randomCard3 = Int.random(in: 0..<52)
-
+        var randomCard2 = Int.random(in: 0..<52)
+        while randomCard2 == randomCard1{
+            randomCard2 = Int.random(in: 0..<52)
+        }
+        var randomCard3 = Int.random(in: 0..<52)
+        
+        while randomCard3 == randomCard1 || randomCard3 == randomCard2{
+                randomCard3 = Int.random(in: 0..<52)
+            }
+        
+        
         player1card1.image = UIImage(named: cards[randomCard1])
         player1card2.image = UIImage(named: cards[randomCard2])
         player1card3.image = UIImage(named: cards[randomCard3])
 
-        let randomCard4 = Int.random(in: 0..<52)
-        let randomCard5 = Int.random(in: 0..<52)
-        let randomCard6 = Int.random(in: 0..<52)
+        var randomCard4 = Int.random(in: 0..<52)
+        while randomCard4 == randomCard1 || randomCard4 == randomCard2 || randomCard4 == randomCard3{
+            randomCard4 = Int.random(in: 0..<52)
+        }
+        var randomCard5 = Int.random(in: 0..<52)
+        while randomCard5 == randomCard1 || randomCard5 == randomCard2 || randomCard5 == randomCard3 || randomCard5 == randomCard4{
+            randomCard5 = Int.random(in: 0..<52)
+        }
+        var randomCard6 = Int.random(in: 0..<52)
+        while randomCard6 == randomCard1 || randomCard6 == randomCard2 || randomCard6 == randomCard3 || randomCard6 == randomCard4 || randomCard6 == randomCard5{
+            randomCard6 = Int.random(in: 0..<52)
+        }
 
         player2card1.image = UIImage(named: cards[randomCard4])
         player2card2.image = UIImage(named: cards[randomCard5])
         player2card3.image = UIImage(named: cards[randomCard6])
-        
+        print(cards[randomCard1], cards[randomCard2],cards[randomCard3],cards[randomCard4],cards[randomCard5],cards[randomCard6])
         if cards[randomCard1] == "AS" || cards[randomCard2] == "AS" || cards[randomCard3] == "AS" {
             winner = 1
         }
@@ -62,23 +80,33 @@ class ViewController: UIViewController {
         if cards[randomCard4] == "AS" || cards[randomCard5] == "AS" || cards[randomCard6] == "AS" {
             winner = 2
         }
-
-    }
-    
-    
-    @IBAction func play(_ sender: UIButton) {
-        winner = 0
-        playCards()
         if winner != 0{
             if winner == 1{
                 winnerlabel.text = "Player1 win!"
             }else{
                 winnerlabel.text = "Player2 win!"
             }
+            alert()
         }else{
             winnerlabel.text = "No Winner"
         }
+    }
+    
+    func alert(){
+        let alert = UIAlertController(title: "CARD GAME", message: "Play Agian?", preferredStyle: .alert)
         
+        let Yes = UIAlertAction(title: "Yes", style: .default) { (action) in self.playCards()
+        }
+        let No = UIAlertAction(title: "No", style: .default) { (action) in self.viewDidLoad()
+        }
+        
+        alert.addAction(Yes)
+        alert.addAction(No)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func play(_ sender: UIButton) {
+        playCards()
     }
     
 
