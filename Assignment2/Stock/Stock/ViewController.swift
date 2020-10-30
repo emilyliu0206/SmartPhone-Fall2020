@@ -30,6 +30,7 @@ class ViewController: UIViewController {
         guard let stockName = txtStockName.text else{ return }
         let priceUrl = "\(priceApiURL)\(stockName)?apikey=\(apiKey)"
         let ceoUrl = "\(CEOApiURL)\(stockName)?apikey=\(apiKey)"
+        SwiftSpinner.show("Getting Info for \(stockName)")
         getStockPrice(priceUrl: priceUrl, stockName: stockName)
         getStockCEO(ceoUrl: ceoUrl, stockName: stockName)
         
