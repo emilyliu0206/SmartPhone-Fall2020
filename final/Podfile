@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Covid19CasesTracker' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for Covid19CasesTracker
+  
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SwiftSpinner'
+
+
+end
